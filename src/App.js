@@ -1,69 +1,70 @@
 
 import React, { useState } from "react";
 
-const agentsStatus = [
-  { name: "Sniper IA", status: "🟢 Actif" },
-  { name: "Mémoire IA", status: "🟢 Connectée" },
-  { name: "Analyse BTC", status: "🟢 Prête" },
-  { name: "Macro IA", status: "🟡 En attente" },
+const agents = [
+  { nom: "IA Sniper", statut: "✅ Actif" },
+  { nom: "IA Macro", statut: "⏸️ En veille" },
+  { nom: "IA Mémoire", statut: "✅ Actif" },
+  { nom: "IA Visualisation", statut: "🔄 En cours" },
 ];
 
-const dashboardStyle = {
-  background: "#000",
-  color: "#00ffcc",
-  fontFamily: "monospace",
-  padding: "2rem",
-  height: "100vh",
-};
-
-function App() {
-  const [command, setCommand] = useState("");
-  const [logs, setLogs] = useState([
-    "🧠 Mémoire IA synchronisée.",
-    "📡 Dernière alerte : BUY BTC (87%)",
-    "🔎 Observation en cours : OR latéral, ETH en baisse.",
+const App = () => {
+  const [commande, setCommande] = useState("");
+  const [journal, setJournal] = useState([
+    "[08:00] 🧠 Mémoire : Analyse de la tendance haussière de l’or",
+    "[08:03] 🎯 Sniper : Signal ACHAT BTC (87%) déclenché",
+    "[08:04] 🧭 Macro : État neutre sur EUR/USD",
+    "[08:05] 🧠 Visualisation : Génération de synthèse en cours...",
   ]);
 
-  const handleCommand = () => {
-    if (command.trim()) {
-      setLogs([...logs, `> ${command}`, "✅ IA : Commande reçue. Traitement en cours..."]);
-      setCommand("");
+  const envoyerCommande = () => {
+    if (commande.trim()) {
+      const entree = `[manuel] > ${commande}`;
+      setJournal([...journal, entree, `[IA] Exécution simulée de : ${commande}`]);
+      setCommande("");
     }
   };
 
   return (
-    <div style={dashboardStyle}>
-      <h1>🧠 Omega∞ - Panneau de Contrôle</h1>
-      <section>
-        <h2>📊 État des Agents IA</h2>
+    <div style={{ padding: 20, fontFamily: "monospace", background: "#0c0c0c", color: "#00ffcc", minHeight: "100vh" }}>
+      <h1>🧠 Omega∞ — Centre de Commande IA</h1>
+
+      <section style={{ marginTop: 30 }}>
+        <h2>🔌 Statut des agents IA</h2>
         <ul>
-          {agentsStatus.map((agent, idx) => (
-            <li key={idx}>{agent.name} — <strong>{agent.status}</strong></li>
+          {agents.map((a, i) => (
+            <li key={i}>• {a.nom} : {a.statut}</li>
           ))}
         </ul>
       </section>
-      <section style={{ marginTop: "2rem" }}>
-        <h2>📜 Journal IA</h2>
-        <div style={{ background: "#111", padding: "1rem", borderRadius: "8px", maxHeight: 200, overflowY: "auto" }}>
-          {logs.map((log, idx) => (
-            <p key={idx} style={{ margin: 0 }}>{log}</p>
+
+      <section style={{ marginTop: 30 }}>
+        <h2>📡 Journal Stratégique IA</h2>
+        <div style={{ background: "#111", padding: 10, borderRadius: 6, maxHeight: 200, overflowY: "auto" }}>
+          {journal.map((entree, idx) => (
+            <div key={idx}>{entree}</div>
           ))}
         </div>
       </section>
-      <section style={{ marginTop: "2rem" }}>
-        <h2>⌨️ Console IA</h2>
+
+      <section style={{ marginTop: 30 }}>
+        <h2>⌨️ Console de Commande IA</h2>
         <input
-          value={command}
-          onChange={(e) => setCommand(e.target.value)}
-          placeholder="Entrer une commande IA…"
-          style={{ padding: 10, width: "80%", background: "#111", color: "#0f0", border: "1px solid #0f0" }}
+          type="text"
+          value={commande}
+          onChange={(e) => setCommande(e.target.value)}
+          placeholder="ex : recalcul BTC"
+          style={{ width: "100%", padding: 12, background: "#111", color: "#fff", border: "1px solid #00ffcc" }}
         />
-        <button onClick={handleCommand} style={{ marginLeft: 10, padding: 10, background: "#0f0", color: "#000", border: "none" }}>
-          Envoyer
+        <button
+          onClick={envoyerCommande}
+          style={{ marginTop: 10, padding: 12, background: "#00ffcc", border: "none", color: "#000", fontWeight: "bold", width: "100%" }}
+        >
+          ➤ Envoyer à l’IA Omega∞
         </button>
       </section>
     </div>
   );
-}
+};
 
 export default App;
