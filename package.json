@@ -1,5 +1,5 @@
 {
-  "name": "omega-infinity-dashboard",
+  "name": "omega-control-center",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

@@ -1,64 +1,67 @@
 
 import React, { useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
-const data = [
-  { name: 'BTC', signal: 87 },
-  { name: 'OR', signal: 72 },
-  { name: 'ETH', signal: 64 },
+const agentsStatus = [
+  { name: "Sniper IA", status: "🟢 Actif" },
+  { name: "Mémoire IA", status: "🟢 Connectée" },
+  { name: "Analyse BTC", status: "🟢 Prête" },
+  { name: "Macro IA", status: "🟡 En attente" },
 ];
 
-const Journal = () => (
-  <div style={{ marginTop: 30 }}>
-    <h3>🧠 Mémoire stratégique</h3>
-    <div style={{ background: '#222', padding: 16, borderRadius: 8, maxHeight: 150, overflowY: 'auto' }}>
-      <p>• L’IA anticipe une hausse du BTC avec forte confiance.</p>
-      <p>• L’or reste stable, signal neutre en cours d’observation.</p>
-      <p>• ETH montre des signes de retournement.</p>
-    </div>
-  </div>
-);
-
-const SignalChart = () => (
-  <ResponsiveContainer width="100%" height={250}>
-    <BarChart data={data}>
-      <XAxis dataKey="name" stroke="#fff" />
-      <YAxis stroke="#fff" />
-      <Tooltip />
-      <Bar dataKey="signal" fill="#00cc99" />
-    </BarChart>
-  </ResponsiveContainer>
-);
-
-const Dashboard = () => (
-  <div style={{ padding: 40, fontFamily: "Arial", background: "#111", color: "#fff" }}>
-    <h1>🚀 Omega∞ Dashboard</h1>
-    <h2 style={{ marginTop: 20 }}>📊 Signaux IA</h2>
-    <SignalChart />
-    <Journal />
-  </div>
-);
+const dashboardStyle = {
+  background: "#000",
+  color: "#00ffcc",
+  fontFamily: "monospace",
+  padding: "2rem",
+  height: "100vh",
+};
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [user, setUser] = useState("");
-  const [pass, setPass] = useState("");
+  const [command, setCommand] = useState("");
+  const [logs, setLogs] = useState([
+    "🧠 Mémoire IA synchronisée.",
+    "📡 Dernière alerte : BUY BTC (87%)",
+    "🔎 Observation en cours : OR latéral, ETH en baisse.",
+  ]);
 
-  const handleLogin = () => {
-    if (user === "omega_user_qf3v" && pass === "wF2@3uV!6dPxY9#A") {
-      setLoggedIn(true);
-    } else {
-      alert("Identifiants invalides.");
+  const handleCommand = () => {
+    if (command.trim()) {
+      setLogs([...logs, `> ${command}`, "✅ IA : Commande reçue. Traitement en cours..."]);
+      setCommand("");
     }
   };
 
-  if (loggedIn) return <Dashboard />;
   return (
-    <div style={{ padding: 40, fontFamily: "Arial", background: "#111", color: "#fff", height: "100vh" }}>
-      <h1>🔐 Connexion à Omega∞</h1>
-      <input style={{ padding: 8, marginBottom: 12, width: 200 }} placeholder="Identifiant" onChange={(e) => setUser(e.target.value)} /><br />
-      <input style={{ padding: 8, marginBottom: 12, width: 200 }} type="password" placeholder="Mot de passe" onChange={(e) => setPass(e.target.value)} /><br />
-      <button style={{ padding: 10, background: "#00cc99", border: "none", color: "#fff", cursor: "pointer" }} onClick={handleLogin}>Se connecter</button>
+    <div style={dashboardStyle}>
+      <h1>🧠 Omega∞ - Panneau de Contrôle</h1>
+      <section>
+        <h2>📊 État des Agents IA</h2>
+        <ul>
+          {agentsStatus.map((agent, idx) => (
+            <li key={idx}>{agent.name} — <strong>{agent.status}</strong></li>
+          ))}
+        </ul>
+      </section>
+      <section style={{ marginTop: "2rem" }}>
+        <h2>📜 Journal IA</h2>
+        <div style={{ background: "#111", padding: "1rem", borderRadius: "8px", maxHeight: 200, overflowY: "auto" }}>
+          {logs.map((log, idx) => (
+            <p key={idx} style={{ margin: 0 }}>{log}</p>
+          ))}
+        </div>
+      </section>
+      <section style={{ marginTop: "2rem" }}>
+        <h2>⌨️ Console IA</h2>
+        <input
+          value={command}
+          onChange={(e) => setCommand(e.target.value)}
+          placeholder="Entrer une commande IA…"
+          style={{ padding: 10, width: "80%", background: "#111", color: "#0f0", border: "1px solid #0f0" }}
+        />
+        <button onClick={handleCommand} style={{ marginLeft: 10, padding: 10, background: "#0f0", color: "#000", border: "none" }}>
+          Envoyer
+        </button>
+      </section>
     </div>
   );
 }
