@@ -1,22 +1,41 @@
 
 import React, { useState } from "react";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+
+const data = [
+  { name: 'BTC', signal: 87 },
+  { name: 'OR', signal: 72 },
+  { name: 'ETH', signal: 64 },
+];
+
+const Journal = () => (
+  <div style={{ marginTop: 30 }}>
+    <h3>🧠 Mémoire stratégique</h3>
+    <div style={{ background: '#222', padding: 16, borderRadius: 8, maxHeight: 150, overflowY: 'auto' }}>
+      <p>• L’IA anticipe une hausse du BTC avec forte confiance.</p>
+      <p>• L’or reste stable, signal neutre en cours d’observation.</p>
+      <p>• ETH montre des signes de retournement.</p>
+    </div>
+  </div>
+);
+
+const SignalChart = () => (
+  <ResponsiveContainer width="100%" height={250}>
+    <BarChart data={data}>
+      <XAxis dataKey="name" stroke="#fff" />
+      <YAxis stroke="#fff" />
+      <Tooltip />
+      <Bar dataKey="signal" fill="#00cc99" />
+    </BarChart>
+  </ResponsiveContainer>
+);
 
 const Dashboard = () => (
-  <div style={{ padding: 40, background: "#f4f4f4", fontFamily: "Arial" }}>
-    <h1>🔐 Omega∞ Dashboard</h1>
-    <h2>✅ Connexion réussie</h2>
-    <div style={{ marginTop: 20 }}>
-      <h3>📈 Signaux IA</h3>
-      <ul>
-        <li><strong>BTC/USD</strong> : Buy (confiance 87%)</li>
-        <li><strong>OR (XAU/USD)</strong> : Hold (confiance 72%)</li>
-        <li><strong>ETH/USD</strong> : Sell (confiance 64%)</li>
-      </ul>
-    </div>
-    <div style={{ marginTop: 30 }}>
-      <h3>🧠 Mémoire stratégique</h3>
-      <p>L’IA anticipe une pression haussière sur l’or. BTC reste fort.</p>
-    </div>
+  <div style={{ padding: 40, fontFamily: "Arial", background: "#111", color: "#fff" }}>
+    <h1>🚀 Omega∞ Dashboard</h1>
+    <h2 style={{ marginTop: 20 }}>📊 Signaux IA</h2>
+    <SignalChart />
+    <Journal />
   </div>
 );
 
@@ -35,11 +54,11 @@ function App() {
 
   if (loggedIn) return <Dashboard />;
   return (
-    <div style={{ padding: 40, fontFamily: "Arial" }}>
-      <h1>Connexion à Omega∞</h1>
-      <input placeholder="Identifiant" onChange={(e) => setUser(e.target.value)} /><br /><br />
-      <input placeholder="Mot de passe" type="password" onChange={(e) => setPass(e.target.value)} /><br /><br />
-      <button onClick={handleLogin}>Se connecter</button>
+    <div style={{ padding: 40, fontFamily: "Arial", background: "#111", color: "#fff", height: "100vh" }}>
+      <h1>🔐 Connexion à Omega∞</h1>
+      <input style={{ padding: 8, marginBottom: 12, width: 200 }} placeholder="Identifiant" onChange={(e) => setUser(e.target.value)} /><br />
+      <input style={{ padding: 8, marginBottom: 12, width: 200 }} type="password" placeholder="Mot de passe" onChange={(e) => setPass(e.target.value)} /><br />
+      <button style={{ padding: 10, background: "#00cc99", border: "none", color: "#fff", cursor: "pointer" }} onClick={handleLogin}>Se connecter</button>
     </div>
   );
 }
