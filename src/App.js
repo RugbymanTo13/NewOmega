@@ -1,3 +1,12 @@
 import React from 'react';
-const App = () => (<div><h1>Bienvenue dans Omega∞</h1><p>Toutes les fonctionnalités sont prêtes.</p></div>);
+
+const App = () => {
+  return (
+    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <h1>Bienvenue dans Omega∞</h1>
+      <p>Interface stratégique IA prête à être utilisée.</p>
+    </main>
+  );
+};
+
 export default App;

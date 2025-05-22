@@ -1,2 +1,2 @@
 # Omega∞ Cockpit
-Cockpit IA complet avec Vite, React, et affichage immédiat.
+Build Vite propre et prêt à déployer sur Vercel sans erreur.
