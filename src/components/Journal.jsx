@@ -1,1 +1,0 @@
-export default function Journal() { return <p>Journal stratégique IA : décisions, erreurs, logs...</p>; }

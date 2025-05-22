@@ -1,1 +1,0 @@
-export default function Agents() { return <p>Agents IA actifs : Sniper ✅ Macro ✅ Mémoire ✅</p>; }
