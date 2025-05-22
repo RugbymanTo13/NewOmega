@@ -1,2 +1,3 @@
 # Omega∞ Cockpit
-Interface stratégique connectée à l’IA réelle Omega∞ avec Vite préconfiguré.
+Interface IA stratégique connectée à ton backend IA réel.
+✅ Prêt pour Vercel/Vite sans erreur.
