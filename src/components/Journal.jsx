@@ -1,0 +1,1 @@
+export default function Journal() { return <p>Journal IA : historique des décisions et erreurs.</p>; }

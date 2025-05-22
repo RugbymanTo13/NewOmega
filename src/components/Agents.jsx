@@ -1,0 +1,1 @@
+export default function Agents() { return <p>Agents IA : Sniper ✅, Macro ✅, Mémoire ✅</p>; }

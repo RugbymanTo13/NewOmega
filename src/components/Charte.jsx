@@ -1,0 +1,1 @@
+export default function Charte() { return <p>Charte IA : conforme, éthique, signée par Omega∞.</p>; }

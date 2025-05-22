@@ -1,0 +1,1 @@
+export default function Vue() { return <p>Vue d’ensemble : cockpit IA Omega∞ opérationnel.</p>; }

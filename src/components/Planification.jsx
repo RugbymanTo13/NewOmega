@@ -1,0 +1,1 @@
+export default function Planification() { return <p>Planification IA : scénarios anticipés et temps forts.</p>; }
