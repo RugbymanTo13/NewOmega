@@ -1,2 +1,2 @@
-# Omega∞ Cockpit — JSX propre et buildable
-Correctif final des balises JSX pour déploiement Vercel sans erreur.
+# Omega∞ Cockpit — Correction finale JSX
+Tous les fichiers sont bien encodés, compilables, et déployables sans erreur Rollup.

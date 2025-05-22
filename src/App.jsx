@@ -1,5 +1,5 @@
 import React from 'react';
-import Onglets from './components/Onglets';
+import Onglets from './components/Onglets.jsx';
 
 const App = () => {
   return (
