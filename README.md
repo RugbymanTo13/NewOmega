@@ -1,2 +1,2 @@
-# Omega∞ Cockpit — Correction finale JSX
-Tous les fichiers sont bien encodés, compilables, et déployables sans erreur Rollup.
+# Omega∞ Cockpit — Version Finale
+Tous les onglets et fonctionnalités IA sont intégrés ici.
