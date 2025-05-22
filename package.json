@@ -1,5 +1,5 @@
 {
-  "name": "omega-infinity-complete",
+  "name": "omega-infinity-exportfix",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",

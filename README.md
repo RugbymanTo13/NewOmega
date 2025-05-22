@@ -1,2 +1,2 @@
-# Omega∞ Cockpit — Build complet
-Tous les modules sont intégrés dans le cockpit IA : onglets, console, journal, graphiques, API IA réelle.
+# Omega∞ Cockpit (correctif export)
+Correction d’export default pour que Vite/Rollup compile sans erreur.
