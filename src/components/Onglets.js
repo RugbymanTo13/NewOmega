@@ -1,0 +1,1 @@
+// Composant de navigation cockpit (Vue d'ensemble, Signaux, Journal, Console, etc.)
