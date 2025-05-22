@@ -1,1 +1,1 @@
-// Graphiques dynamiques pour BTC / OR / ETH
+// Graphiques BTC / OR / ETH

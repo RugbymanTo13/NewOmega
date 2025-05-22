@@ -1,1 +1,1 @@
-// Affichage des agents IA, états, actions, logs
+// Visualisation des agents IA

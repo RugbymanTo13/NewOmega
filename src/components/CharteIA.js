@@ -1,1 +1,1 @@
-// Charte complète avec engagements éthiques, affichée et signée automatiquement
+// Charte éthique IA signée

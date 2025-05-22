@@ -1,1 +1,1 @@
-// Journal stratégique avec mémoire, tri et priorités
+// Journal stratégique IA

@@ -1,1 +1,1 @@
-// Console IA intelligente (langage naturel en français)
+// Console IA interactive (fr)

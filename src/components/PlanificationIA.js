@@ -1,1 +1,1 @@
-// Planification stratégique, scénarios IA
+// Planification stratégique
