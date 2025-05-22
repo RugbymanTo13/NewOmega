@@ -1,0 +1,1 @@
+const Console = () => <p>Console IA connectée à l’API (commande texte).</p>; export default Console;

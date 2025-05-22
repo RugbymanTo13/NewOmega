@@ -1,0 +1,1 @@
+const Agents = () => <p>Visualisation des agents IA : Sniper, Macro, Mémoire...</p>; export default Agents;

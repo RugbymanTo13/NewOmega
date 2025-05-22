@@ -1,0 +1,1 @@
+const Journal = () => <p>Journal stratégique IA (logs, erreurs, décisions).</p>; export default Journal;
