@@ -1,5 +1,5 @@
 {
-  "name": "omega-infinity-exportfix",
+  "name": "omega-infinity-jsxclean",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
