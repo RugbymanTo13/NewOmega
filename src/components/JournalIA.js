@@ -1,1 +1,0 @@
-// Journal stratégique IA
