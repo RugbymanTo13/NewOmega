@@ -1,1 +1,1 @@
-// Composant de navigation cockpit
+// Onglets de navigation

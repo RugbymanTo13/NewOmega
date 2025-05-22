@@ -1,1 +1,1 @@
-// Charte éthique IA signée
+// Charte IA

@@ -1,1 +1,1 @@
-// Console IA interactive (fr)
+// Console IA

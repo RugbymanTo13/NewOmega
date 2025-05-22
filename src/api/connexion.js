@@ -1,1 +1,1 @@
-// Connexion à l'API IA Omega∞ réelle
+// Connexion API Omega∞
