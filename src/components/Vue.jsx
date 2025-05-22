@@ -1,0 +1,1 @@
+export default function Vue() { return <p>Vue d’ensemble de l’IA Omega∞ en ligne.</p>; }

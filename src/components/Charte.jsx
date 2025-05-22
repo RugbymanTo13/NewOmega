@@ -1,0 +1,1 @@
+export default function Charte() { return <p>Charte IA : conformité, anonymat, éthique appliquée ✅</p>; }

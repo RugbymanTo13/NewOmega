@@ -1,0 +1,1 @@
+export default function Planification() { return <p>Planification IA : scénarios calculés (1h, 4h, 24h)</p>; }
