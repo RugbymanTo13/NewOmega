@@ -1,1 +1,0 @@
-const Planification = () => <p>Scénarios IA anticipés, prévisions et suggestions IA.</p>; export default Planification;

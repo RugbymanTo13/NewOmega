@@ -1,1 +1,0 @@
-const Charte = () => <p>Charte IA complète : éthique, conformité, signature.</p>; export default Charte;

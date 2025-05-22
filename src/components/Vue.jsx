@@ -1,1 +1,0 @@
-const Vue = () => <p>Bienvenue dans l'onglet Vue d’ensemble</p>; export default Vue;

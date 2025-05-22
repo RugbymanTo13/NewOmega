@@ -1,1 +1,0 @@
-const Signaux = () => <p>Graphiques et signaux IA (BTC, OR, ETH) apparaîtront ici.</p>; export default Signaux;
